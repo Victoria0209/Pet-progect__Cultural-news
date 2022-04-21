@@ -3,6 +3,28 @@
     font-family: 'Courier New', Courier, monospace;
 }
 
+@mixin FlexBox () {
+    display: flex;
+    justify-content: center;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 1.2vw;
+    // font-size: 20px;
+    width: 100%;
+    min-height: 320px;
+    margin: 0 auto;
+
+    @media screen and (max-width:1000px) {
+        font-size: 1.6vw;
+    }
+
+    @media screen and (max-width:400px) {
+        font-size: 1.8vw;
+    }
+}
+
 .visually-hidden {
     position: absolute;
     clip: rect(0 0 0 0);
@@ -13,86 +35,182 @@
 
 a {
     text-decoration: none;
-
 }
 
 .menu {
 
+    &__button {
+        display: none;
+        text-align: end;
+        position: absolute;
+        top: 2.3rem;
+        right: 1.25rem;
+
+        &_burger {
+            width: 2.35rem;
+            height: 1.3rem;
+
+            .rect1 {
+                width: 46px;
+                height: 3px;
+            }
+
+        }
+
+        @media screen and (max-width:700px) {
+            display: block;
+        }
+
+        @media screen and (max-width:400px) {
+            top: 4.3rem;
+            right: 2.25rem;
+        }
+    }
+
     &__link {
         display: block;
-        margin-top: 65px;
-        margin-bottom: 60px;
+        margin-top: 3.25rem;
+        margin-bottom: 3rem;
         text-align: center;
+
+        @media screen and (max-width:700px) {
+            text-align: start;
+            margin-left: 2rem;
+        }
+    }
+
+    &__logo {
+        height: auto;
+        width: 270px;
     }
 
     &__site-navigation {
-        margin-bottom: 42px;
-        display: flex;
-        justify-content: center;
+        @include FlexBox();
+        margin-bottom: 2.1rem;
         flex-wrap: wrap;
+
+        @media screen and (max-width:700px) {
+            transform: translateX(100%);
+            position: fixed;
+            background: #fff;
+            z-index: 50;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            margin: 0;
+            width: 22.7rem;
+            flex-direction: column;
+            justify-content: space-around;
+            padding-left: 3rem;
+            font-size: 2rem;
+        }
     }
 
     &__site-navigation-item {
-        margin-right: 40px;
+        margin-right: 2rem;
 
         a {
             color: rgb(30, 28, 28);
         }
     }
+
+    &__site-navigation-item:last-child {
+        margin-right: 0;
+    }
 }
 
 .headline {
+    position: relative;
 
     &__header {
         position: absolute;
-        top: 40%;
-        left: 27%;
-        font-size: 90px;
+        top: 17%;
+        left: 26%;
+        font-size: 4.5rem;
         z-index: 1;
 
         a {
             @include textDecor();
         }
+
+        @media screen and (max-width:1000px) {
+            top: 10%;
+            left: 18%;
+        }
+
+        @media screen and (max-width:400px) {
+            left: 14%;
+        }
     }
 
     &__icon {
-        position: relative;
+
         width: 100%;
         height: auto;
-        margin-bottom: 50px;
+        margin-bottom: 2.5rem;
     }
 
     &__text {
-        position: absolute;
-        top: 75%;
-        left: 35%;
-        font-size: 15px;
-        z-index: 1;
         @include textDecor();
+        position: absolute;
+        top: 70%;
+        left: 34%;
+        font-size: 0.75rem;
+        z-index: 1;
         text-align: center;
         line-height: 1.5em;
-        width: 540px;
+        width: 27rem;
+
+        @media screen and (max-width:1200px) {
+            font-size: 1.5rem;
+            top: 49%;
+            left: 26%;
+            width: 42rem;
+        }
+
+        @media screen and (max-width:1000px) {
+            top: 39%;
+            left: 10%;
+            width: 49rem;
+        }
+
+        @media screen and (max-width:400px) {
+            left: 7%;
+        }
+
     }
 }
 
 .reviews {
 
     &__header {
-        font-size: 20px;
         font-weight: bold;
-        margin-bottom: 23px;
+        margin-bottom: 1.15rem;
         text-align: center;
+
+        @media screen and (max-width:700px) {
+            font-size: 2rem;
+        }
     }
 
     &__list {
-        display: flex;
-        justify-content: center;
+        @include FlexBox();
+
+        @media screen and (max-width:1000px) {
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+        }
     }
 
     &__item {
-        margin-right: 25px;
-        margin-bottom: 45px;
-        width: 380px;
+        margin-right: 1.25rem;
+        margin-bottom: 2.25rem;
+        width: 19rem;
+
+        @media screen and (max-width:700px) {
+            width: 39rem;
+        }
     }
 
     &__item:nth-child(3n) {
@@ -109,13 +227,16 @@ a {
     }
 
     &__header {
-        font-size: 25px;
+        font-size: 1.25rem;
         font-weight: bold;
-        margin-bottom: 20px;
-
+        margin-bottom: 1rem;
 
         a {
             color: rgb(30, 28, 28);
+        }
+
+        @media screen and (max-width:700px) {
+            font-size: 2rem;
         }
     }
 
@@ -129,75 +250,93 @@ a {
         order: -1;
         width: 100%;
         height: auto;
-        margin-bottom: 30px;
+        margin-bottom: 1.5rem;
     }
 
     &__text {
-        padding-right: 15px;
+        padding-right: 0.75rem;
+
+        @media screen and (max-width:700px) {
+            font-size: 2rem;
+        }
     }
 }
 
 .promo {
     background-color: #F7F7F7;
-    margin-bottom: 25px;
-    
+    margin-bottom: 1.25rem;
+
 
     &__wrap {
         background-color: #ffffff;
         border-radius: 50%;
-        width: 730px;
+        width: 36.5rem;
         text-align: center;
         margin: 0 auto;
+
+        @media screen and (max-width:700px) {
+            width: 52.5rem;
+        }
     }
 
     &__header {
-        font-size: 20px;
         font-weight: bold;
-        margin-bottom: 45px;
+        margin-bottom: 2.25rem;
         text-align: center;
-        padding-top: 70px;
+        padding-top: 3.5rem;
+
+        @media screen and (max-width:700px) {
+            font-size: 2rem;
+        }
     }
 
     &__item {
-        margin-bottom: 30px;
+        margin-bottom: 1.5rem;
     }
 
     &__more {
         display: inline-block;
-        padding: 15px 25px;
+        padding: 0.75rem 1.25rem;
         background-color: #FF7931;
         color: #fff;
-        margin-bottom: 25px;
+        margin-bottom: 1.25rem;
+
+        @media screen and (max-width:700px) {
+            font-size: 1.5rem;
+        }
     }
 }
 
 .item {
 
     &__head {
-        font-size: 30px;
+        font-size: 1.5rem;
         font-weight: bold;
-        margin-bottom: 20px;
+        margin-bottom: 1rem;
+
+        @media screen and (max-width:700px) {
+            font-size: 2rem;
+        }
     }
 
     &__info {
-        padding: 0 215px;
+        padding: 0 10.75rem;
         text-align: center;
         position: relative;
-        padding-bottom: 30px;
+        padding-bottom: 1.5rem;
+
+        @media screen and (max-width:700px) {
+            font-size: 2rem;
+        }
     }
 
     &__border {
         display: block;
-        width: 80px;
+        width: 4rem;
         border-bottom: 1px solid #ebebeb;
         position: absolute;
         left: 47%;
     }
-
-    // &__border:nth-child(3n) {
-    //    border-color: red;
-
-    // }
 }
 
 .footer {
@@ -205,23 +344,27 @@ a {
 
     &__logo {
         display: block;
-        padding-top: 40px;
+        padding-top: 2rem;
         text-align: center;
-        margin-bottom: 50px;
+        margin-bottom: 2.5rem;
     }
 
     &__navigation {
-        display: flex;
-        justify-content: center;
-        padding-bottom: 55px;
+        @include FlexBox();
+        padding-bottom: 2.75rem;
         border-bottom: 1px solid rgb(159, 159, 159);
-        width: 1000px;
+        width: 50rem;
         margin: 0 auto;
-        margin-bottom: 50px;
+        margin-bottom: 2.5rem;
+
+        @media screen and (max-width:700px) {
+            font-size: 2rem;
+            flex-wrap: wrap;
+        }
     }
 
     &__navigation-item {
-        margin-right: 40px;
+        margin-right: 2rem;
 
         a {
             @include textDecor();
@@ -230,15 +373,14 @@ a {
 
 
     &__social-list {
-        display: flex;
-        padding-bottom: 50px;
-        justify-content: center;
+        @include FlexBox();
+        padding-bottom: 2.5rem;
     }
 
     &__social-item {
-        margin-right: 40px;
-        width: 15px;
-        height: 15px;
+        margin-right: 2rem;
+        width: 0.75rem;
+        height: 0.75rem;
 
         a {
             display: block;
@@ -246,8 +388,13 @@ a {
             img {
                 width: 100%;
                 background-color: #fff;
-                padding: 10px;
+                padding: 0.5rem;
             }
+        }
+
+        @media screen and (max-width:700px) {
+            font-size: 2rem;
+            width: 1.75rem;
         }
     }
 }
