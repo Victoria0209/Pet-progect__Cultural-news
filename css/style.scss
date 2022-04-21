@@ -1,0 +1,253 @@
+@mixin textDecor () {
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+
+a {
+    text-decoration: none;
+
+}
+
+.menu {
+
+    &__link {
+        display: block;
+        margin-top: 65px;
+        margin-bottom: 60px;
+        text-align: center;
+    }
+
+    &__site-navigation {
+        margin-bottom: 42px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    &__site-navigation-item {
+        margin-right: 40px;
+
+        a {
+            color: rgb(30, 28, 28);
+        }
+    }
+}
+
+.headline {
+
+    &__header {
+        position: absolute;
+        top: 40%;
+        left: 27%;
+        font-size: 90px;
+        z-index: 1;
+
+        a {
+            @include textDecor();
+        }
+    }
+
+    &__icon {
+        position: relative;
+        width: 100%;
+        height: auto;
+        margin-bottom: 50px;
+    }
+
+    &__text {
+        position: absolute;
+        top: 75%;
+        left: 35%;
+        font-size: 15px;
+        z-index: 1;
+        @include textDecor();
+        text-align: center;
+        line-height: 1.5em;
+        width: 540px;
+    }
+}
+
+.reviews {
+
+    &__header {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 23px;
+        text-align: center;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__item {
+        margin-right: 25px;
+        margin-bottom: 45px;
+        width: 380px;
+    }
+
+    &__item:nth-child(3n) {
+        margin-right: 0;
+
+    }
+}
+
+.item {
+
+    &__desc {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__header {
+        font-size: 25px;
+        font-weight: bold;
+        margin-bottom: 20px;
+
+
+        a {
+            color: rgb(30, 28, 28);
+        }
+    }
+
+    &__header-active {
+        a {
+            color: #ff9d6a;
+        }
+    }
+
+    &__icon {
+        order: -1;
+        width: 100%;
+        height: auto;
+        margin-bottom: 30px;
+    }
+
+    &__text {
+        padding-right: 15px;
+    }
+}
+
+.promo {
+    background-color: #F7F7F7;
+    margin-bottom: 25px;
+    
+
+    &__wrap {
+        background-color: #ffffff;
+        border-radius: 50%;
+        width: 730px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    &__header {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 45px;
+        text-align: center;
+        padding-top: 70px;
+    }
+
+    &__item {
+        margin-bottom: 30px;
+    }
+
+    &__more {
+        display: inline-block;
+        padding: 15px 25px;
+        background-color: #FF7931;
+        color: #fff;
+        margin-bottom: 25px;
+    }
+}
+
+.item {
+
+    &__head {
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    &__info {
+        padding: 0 215px;
+        text-align: center;
+        position: relative;
+        padding-bottom: 30px;
+    }
+
+    &__border {
+        display: block;
+        width: 80px;
+        border-bottom: 1px solid #ebebeb;
+        position: absolute;
+        left: 47%;
+    }
+
+    // &__border:nth-child(3n) {
+    //    border-color: red;
+
+    // }
+}
+
+.footer {
+    background-color: #575757;
+
+    &__logo {
+        display: block;
+        padding-top: 40px;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    &__navigation {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 55px;
+        border-bottom: 1px solid rgb(159, 159, 159);
+        width: 1000px;
+        margin: 0 auto;
+        margin-bottom: 50px;
+    }
+
+    &__navigation-item {
+        margin-right: 40px;
+
+        a {
+            @include textDecor();
+        }
+    }
+
+
+    &__social-list {
+        display: flex;
+        padding-bottom: 50px;
+        justify-content: center;
+    }
+
+    &__social-item {
+        margin-right: 40px;
+        width: 15px;
+        height: 15px;
+
+        a {
+            display: block;
+
+            img {
+                width: 100%;
+                background-color: #fff;
+                padding: 10px;
+            }
+        }
+    }
+}
