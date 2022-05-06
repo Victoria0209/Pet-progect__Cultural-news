@@ -142,7 +142,7 @@ a {
     &__header {
         position: absolute;
         top: 17%;
-        left: 26%;
+        left: 39%;
         font-size: 4.5rem;
         z-index: 1;
 
@@ -161,7 +161,6 @@ a {
     }
 
     &__icon {
-
         width: 100%;
         height: auto;
         margin-bottom: 2.5rem;
@@ -170,7 +169,7 @@ a {
     &__text {
         @include textDecor();
         position: absolute;
-        top: 70%;
+        top: 56%;
         left: 34%;
         font-size: 0.75rem;
         z-index: 1;
