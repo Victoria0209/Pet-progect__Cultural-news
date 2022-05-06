@@ -426,12 +426,12 @@ a {
 
 .popUp {
     display: none;
-    width: 500px;
-    height: 700px;
+    width: 34rem;
+    height: 35rem;
     text-align: end;
-    padding: 15px;
+    padding: 1.3rem;
     background-color: white;
-    border-radius: 10px;
+    border-radius: 0.5rem;
     top: 0;
     right: 0;
     bottom: 0;
@@ -462,9 +462,8 @@ a {
 
     &__item {
         margin-right: 1.25rem;
-        margin-bottom: 2.25rem;
-        margin-top: 2rem;
-        width: 37rem;
+        margin-bottom: 1.25rem;
+        width: 100%;
         text-align: center;
     }
 }
@@ -474,6 +473,7 @@ a {
     &__desc {
         display: flex;
         flex-direction: column;
+        padding-bottom: 1rem;
     }
 
     &__header {
