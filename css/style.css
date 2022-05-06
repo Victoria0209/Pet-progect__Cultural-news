@@ -52,6 +52,7 @@ a {
 @media screen and (max-width: 700px) {
   .menu__button {
     display: block;
+    top: 3.3rem;
   }
 }
 
@@ -59,6 +60,23 @@ a {
   .menu__button {
     top: 4.3rem;
     right: 2.25rem;
+  }
+}
+
+.menu__cross {
+  display: none;
+}
+
+.menu__cross_svg {
+  width: 2rem;
+}
+
+@media screen and (max-width: 700px) {
+  .menu__cross {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    z-index: 100;
   }
 }
 
@@ -113,6 +131,7 @@ a {
         justify-content: space-around;
     padding-left: 3rem;
     font-size: 2rem;
+    padding-top: 6rem;
   }
 }
 
@@ -135,7 +154,7 @@ a {
 .headline__header {
   position: absolute;
   top: 17%;
-  left: 26%;
+  left: 39%;
   font-size: 4.5rem;
   z-index: 1;
 }
@@ -168,7 +187,7 @@ a {
   color: #fff;
   font-family: 'Courier New', Courier, monospace;
   position: absolute;
-  top: 70%;
+  top: 56%;
   left: 34%;
   font-size: 0.75rem;
   z-index: 1;
