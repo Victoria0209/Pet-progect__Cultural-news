@@ -1,5 +1,5 @@
 import {
-    createHeadline,
+    createHeadlines,
 } from './data.js';
 import {
    getRandomNumber
@@ -16,9 +16,9 @@ const similarLinkFragment = document.createDocumentFragment();
 const rendomInt = getRandomNumber(0,2)
 
 const picElement = picTemplate.cloneNode(true);
-picElement.querySelector('.headline__icon').src = createHeadline[rendomInt].url;
-picElement.querySelector('.headline__header a').textContent = createHeadline[rendomInt].place;
-picElement.querySelector('.headline__text').textContent = createHeadline[rendomInt].desc;
+picElement.querySelector('.headline__icon').src = createHeadlines[rendomInt].url;
+picElement.querySelector('.headline__header a').textContent = createHeadlines[rendomInt].place;
+picElement.querySelector('.headline__text').textContent = createHeadlines[rendomInt].desc;
 
 
 if (picElement.querySelector('.headline__header a').textContent.length > 10) {

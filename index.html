@@ -54,23 +54,16 @@
     <main>
         <h1 class="visually-hidden">Новости культуры</h1>
         <section class="headline">
-            <!-- <h2 class="headline__header"><a href="#">ПОДВОДНЫЙ ОТЕЛЬ</a></h2>
-            <img class="headline__icon" src="img/1.jpg" width="1440" height="464" alt="Подводный отель в Дубаи">
-            <p class="headline__text">Как известно, Дубай – город контрастов. Самые революционные
-                и фантастические мечты архитекторов способен воплотить в жизнь этот мегаполис, построенный на нефти
-                и за
-                счет нефти
-            </p> -->
         </section>
 
         <section class="reviews">
             <h2 class="reviews__header">ОБЗОРЫ</h2>
             <ul class="reviews__list">
-                <li class="reviews__item">
+                <!-- <li class="reviews__item">
                     <article class="item__desc">
                         <h3 class="item__header"><a href="#">«Шальные годы Монпарнаса»</a></h3>
                         <img class="item__icon" src="img/monparnasse.jpg"
-                            alt="Сцена из спектакля «Шальные годы» Монпарнаса»" width="371" height="203">
+                            alt="Сцена из спектакля «Шальные годы» Монпарнаса" width="371" height="203">
                         <p class="item__text">В Музее изобразительных искусств имени Пушкина с 29 сентября по 29 ноября
                             проходит выставка
                             «Шальные годы Монпарнаса»</p>
@@ -92,12 +85,12 @@
                     <article class="item__desc">
                         <h3 class="item__header"><a href="#">Сферические чудаки</a></h3>
                         <img class="item__icon" src="img/spherical-eccentrics.jpg" width="371" height="203"
-                            alt="Сцена из спектакля «Чудаки и зануды»">
+                            alt="Сцена из спектакля «Чудаки и зануды">
                         <p class="item__text">Корреспондентам «Культурного обозревателя» посчастливилось побывать в
                             театре «Сфера» на
                             премьере спектакля «Чудаки и зануды»</p>
                     </article>
-                </li>
+                </li> -->
             </ul>
         </section>
 
@@ -176,6 +169,12 @@
         </ul>
     </footer>
 
+    <div class="popUp-fade">
+    </div>
+    <div class="popUp">
+        <button class="popUp__close">✕</button>
+    </div>
+
     <template id="headline">
         <div href="#" class="headline-block">
             <h2 class="headline__header"><a href="#">ПОДВОДНЫЙ ОТЕЛЬ</a></h2>
@@ -185,6 +184,32 @@
                 и за
                 счет нефти
             </p>
+        </div>
+    </template>
+
+    <template id="reviews">
+        <li class="reviews__item">
+            <article class="item__desc">
+                <h3 class="item__header"><a href="#">«Шальные годы Монпарнаса»</a></h3>
+                <img class="item__icon" src="img/monparnasse.jpg"
+                    alt="Сцена из спектакля «Шальные годы» Монпарнаса»" width="371" height="203">
+                <p class="item__text">В Музее изобразительных искусств имени Пушкина с 29 сентября по 29 ноября
+                    проходит выставка
+                    «Шальные годы Монпарнаса»</p>
+            </article>
+        </li>
+    </template>
+
+    <template id="reviews-popup">
+        <div class="reviews-popup__item">
+            <article class="item-popup__desc">
+                <h3 class="item-popup__header"><a href="#">«Шальные годы Монпарнаса»</a></h3>
+                <img class="item-popup__icon" src="img/monparnasse.jpg"
+                    alt="Сцена из спектакля «Шальные годы» Монпарнаса»" width="371" height="203">
+                <p class="item-popup__text">В Музее изобразительных искусств имени Пушкина с 29 сентября по 29 ноября
+                    проходит выставка
+                    «Шальные годы Монпарнаса»</p>
+            </article>
         </div>
     </template>
 
